@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App matches the snapshot 1`] = `
+<section>
+  <h1>
+    Test App
+  </h1>
+  <label>
+    <input
+      checked={undefined}
+      onChange={[Function]}
+      type="checkbox"
+    />
+    Click this
+  </label>
+</section>
+`;
