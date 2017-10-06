@@ -1,4 +1,4 @@
-import check from './check';
+import reducer from './check';
 import {combineReducers} from 'redux';
 
-export default combineReducers({check});
+export default combineReducers({app: reducer});

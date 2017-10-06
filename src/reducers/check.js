@@ -1,16 +1,23 @@
-import {setCheck} from '../actions/check';
+import actions from '../actions/actions';
 import {handleActions} from 'redux-actions';
 
-const initialState = false;
+const initialState = {
+  backgroundColor: 'blue',
+  checked: false
+};
 
-const check = handleActions(
+const reducer = handleActions(
   {
-    [setCheck]: (state, action) => {
-      state = action.payload;
-      return state;
-    }
+    [actions.setCheck]: (state, action) => ({
+      ...state,
+      checked: action.payload
+    }),
+    [actions.setBackgroundColor]: (state, action) => ({
+      ...state,
+      backgroundColor: action.payload
+    })
   },
   initialState
 );
 
-export default check;
+export default reducer;
